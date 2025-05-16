@@ -62,6 +62,10 @@
             <price>#2</price>
             <type>Red, Blue</type>
         </car>
+        <car type="HellCat">
+            <price>#</price>
+            <type>unavailable</type>
+        </car>
     </result>
 
 </salon>
