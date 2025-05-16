@@ -2,33 +2,21 @@
 
     <mybuddy>
         <infobuddy>
-            <firstname>
-                Familiasini bilmiman
-            </firstname>
-            <lastname>
-                Muslimbek
-            </lastname>
+            <firstname>Familiasini bilmiman</firstname>
+            <lastname>Muslimbek</lastname>
         </infobuddy>
         <studied>
-            <laststudied>
-                Najot talim
-            </laststudied>
+            <laststudied>Najot talim</laststudied>
         </studied>
     </mybuddy>
 
     <myself>
-        <infobuddy>
-            <firstname>
-                Dior
-            </firstname>
-            <lastname>
-                Olimov
-            </lastname>
-        </infobuddy>
+        <infomyself>
+            <firstname>Dior</firstname>
+            <lastname>Olimov</lastname>
+        </infomyself>
         <studied>
-            <onlyonce>
-                studied by najot talim
-            </onlyonce>
+            <onlyonce>studied by najot talim</onlyonce>
         </studied>
     </myself>
 
