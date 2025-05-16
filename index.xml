@@ -35,6 +35,7 @@
         <car types="Cobalt">Cobalt</car>
         <car types="Maluba">Maluba</car>
         <car types="Nexia">Nexia</car>
+        <car types="HellCat">HellCat</car>
     </types>
 
     <colors>
