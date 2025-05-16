@@ -38,9 +38,9 @@
     </types>
 
     <colors>
-        <red id="Red">Red</red>
-        <blue id="Blue">Blue</blue>
-        <green id="Green">Green</green>
+        <red type="Red">Red</red>
+        <blue type="Blue">Blue</blue>
+        <green type="Green">Green</green>
     </colors>
 
     <prices>
