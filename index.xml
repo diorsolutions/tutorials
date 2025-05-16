@@ -2,12 +2,12 @@
 
     <mybuddy>
 
-        <infobuddy>
+        <infobuddy> //this info about himself
             <firstname>Familiasini bilmiman</firstname>
             <lastname>Muslimbek</lastname>
         </infobuddy>
 
-        <studied>
+        <studied> //this info him educations
             <laststudied>Najot talim</laststudied>
         </studied>
 
@@ -23,7 +23,7 @@
         <studied>
             <onlyonce>studied by najot talim</onlyonce>
         </studied>
-        
+
     </myself>
 
 </we_re>
