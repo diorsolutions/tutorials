@@ -2,10 +2,10 @@
 
     <mybuddy>
 
-        <infobuddy> //this info about himself
+        <infoadress> //this info about himself
             <firstname>Familiasini bilmiman</firstname>
             <lastname>Muslimbek</lastname>
-        </infobuddy>
+        </infoadress>
 
         <studied> //this info about him educations
             <laststudied>Najot talim</laststudied>
@@ -15,10 +15,10 @@
     //I'm begin talking about myself
     <myself>
 
-        <infomyself> //this info about myself
+        <infoadress> //this info about myself
             <firstname>Dior</firstname>
             <lastname>Olimov</lastname>
-        </infomyself>
+        </infoadress>
 
         <studied> //this info about my educations
             <onlyonce>studied by najot talim</onlyonce>
