@@ -7,7 +7,7 @@
             <lastname>Muslimbek</lastname>
         </infobuddy>
 
-        <studied> //this info him educations
+        <studied> //this info about him educations
             <laststudied>Najot talim</laststudied>
         </studied>
 
@@ -15,12 +15,12 @@
 
     <myself>
 
-        <infomyself>
+        <infomyself> //this info about myself
             <firstname>Dior</firstname>
             <lastname>Olimov</lastname>
         </infomyself>
 
-        <studied>
+        <studied> //this info about my educations
             <onlyonce>studied by najot talim</onlyonce>
         </studied>
 
