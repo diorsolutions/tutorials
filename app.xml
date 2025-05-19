@@ -1,7 +1,7 @@
 //Types of Food
 
 <products>
-  <produce type="melon_products">
+  <produce type="food_products">
     <items details="vegetable">
       <product
         type="vegetable"
@@ -10,29 +10,29 @@
         weight="1kg"
         quality="not to bad"
       ></product>
-      <prpduct
+      <product
         type="vegetable"
         name="Cabbage Leaf"
         price="12$"
         weight="500gr"
         quality="normal"
-      ></prpduct>
-      <prpduct
+      ></product>
+      <product
         type="vegetable"
         name="pumpkin Leaf"
         price="3$"
         weight="1kg"
         quality="normal"
-        delievery="none"
-      ></prpduct>
-      <prpduct
+        delivery="none"
+      ></product>
+      <product
         type="vegetable"
         name="Leaf"
-        delievery="none"
+        delivery="none"
         price="22$"
         weight="100gr"
         quality="new"
-      ></prpduct>
+      ></product>
     </items>
     <items details="fruit">
       <product
@@ -40,16 +40,15 @@
         name="limon"
         price="2$"
         quality="new"
-        delievery="none"
+        delivery="none"
       ></product>
       <product
         type="fruit"
         name="strawberry"
         quality="new"
         price="14$"
-        delievery="none"
-      >
-      </product>
+        delivery="none"
+      ></product>
     </items>
     <items details="cereal">
       <product
@@ -57,18 +56,16 @@
         name="wheat"
         price="190$"
         weight="100kg"
-        delievery="yes"
+        delivery="yes"
         quality="normal"
-      >
-      </product>
+      ></product>
       <product
         type="cereal"
         name="rice"
         price="20$"
-        delievery="yes"
+        delivery="yes"
         quality="new"
-      >
-      </product>
+      ></product>
     </items>
     <items details="tuber">
       <product
@@ -76,21 +73,21 @@
         name="carrot"
         price="30$"
         quality="new"
-        delievery="none"
+        delivery="none"
       ></product>
       <product
         type="tuber"
         name="radish"
         price="10$"
         quality="new"
-        delievery="none"
+        delivery="none"
       ></product>
       <product
         type="tuber"
         name="pototo"
         price="10$"
         quality="new"
-        delievery="none"
+        delivery="none"
       ></product>
     </items>
   </produce>
@@ -100,15 +97,14 @@
         type="washing"
         name="washing machine"
         quality="new"
-        delievery="yes"
+        delivery="yes"
         price="100$"
-      >
-      </product>
+      ></product>
       <product
         type="washing"
         name="drying machine"
         quality="new"
-        delievery="yes"
+        delivery="yes"
         price="80$"
       ></product>
     </items>
@@ -117,14 +113,14 @@
         type="spare_parts"
         name="Iron"
         price="30$"
-        delievery="yes"
+        delivery="yes"
         quality="new"
       ></product>
       <product
         type="car_parts"
         name="baloon"
         price="10$"
-        delievery="yes"
+        delivery="yes"
         quality="new"
       ></product>
     </items>

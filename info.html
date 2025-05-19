@@ -34,40 +34,170 @@
 
 </we_re> -->
 
-
 <salon>
+  <types>
+    <car types="Cobalt">Cobalt</car>
+    <car types="Maluba">Maluba</car>
+    <car types="Nexia">Nexia</car>
+  </types>
 
-    <types>
-        <car types="Cobalt">Cobalt</car>
-        <car types="Maluba">Maluba</car>
-        <car types="Nexia">Nexia</car>
-    </types>
+  <colors>
+    <red id="Red">Red</red>
+    <blue id="Blue">Blue</blue>
+    <green id="Green">Green</green>
+  </colors>
 
-    <colors>
-        <red id="Red">Red</red>
-        <blue id="Blue">Blue</blue>
-        <green id="Green">Green</green>
-    </colors>
+  <prices>
+    <price id="1">100$</price>
+    <price id="2">150$</price>
+    <price id="3">180$</price>
+  </prices>
 
-    <prices>
-        <price id="1">100$</price>
-        <price id="2">150$</price>
-        <price id="3">180$</price>
-    </prices>
-
-    <result>
-        <car type="Cobalt">
-            <price>#1</price>
-            <type>Red</type>
-        </car>
-        <car type="Maluba">
-            <price>#3</price>
-            <type>Red, Green</type>
-        </car>
-        <car type="Nexia">
-            <price>#2</price>
-            <type>Red, Blue</type>
-        </car>
-    </result>
-
+  <result>
+    <car type="Cobalt">
+      <price>#1</price>
+      <type>Red</type>
+    </car>
+    <car type="Maluba">
+      <price>#3</price>
+      <type>Red, Green</type>
+    </car>
+    <car type="Nexia">
+      <price>#2</price>
+      <type>Red, Blue</type>
+    </car>
+  </result>
 </salon>
+
+//Types of Food
+
+<products>
+  <produce type="melon_products">
+    <items details="vegetable">
+      <product
+        type="vegetable"
+        name="pumpkin"
+        price="10$"
+        weight="1kg"
+        quality="not to bad"
+      ></product>
+      <prpduct
+        type="vegetable"
+        name="Cabbage Leaf"
+        price="12$"
+        weight="500gr"
+        quality="normal"
+      ></prpduct>
+      <prpduct
+        type="vegetable"
+        name="pumpkin Leaf"
+        price="3$"
+        weight="1kg"
+        quality="normal"
+        delievery="none"
+      ></prpduct>
+      <prpduct
+        type="vegetable"
+        name="Leaf"
+        delievery="none"
+        price="22$"
+        weight="100gr"
+        quality="new"
+      ></prpduct>
+    </items>
+    <items details="fruit">
+      <product
+        type="fruit"
+        name="limon"
+        price="2$"
+        quality="new"
+        delievery="none"
+      ></product>
+      <product
+        type="fruit"
+        name="strawberry"
+        quality="new"
+        price="14$"
+        delievery="none"
+      >
+      </product>
+    </items>
+    <items details="cereal">
+      <product
+        type="cereal"
+        name="wheat"
+        price="190$"
+        weight="100kg"
+        delievery="yes"
+        quality="normal"
+      >
+      </product>
+      <product
+        type="cereal"
+        name="rice"
+        price="20$"
+        delievery="yes"
+        quality="new"
+      >
+      </product>
+    </items>
+    <items details="tuber">
+      <product
+        type="tuber"
+        name="carrot"
+        price="30$"
+        quality="new"
+        delievery="none"
+      ></product>
+      <product
+        type="tuber"
+        name="radish"
+        price="10$"
+        quality="new"
+        delievery="none"
+      ></product>
+      <product
+        type="tuber"
+        name="pototo"
+        price="10$"
+        quality="new"
+        delievery="none"
+      ></product>
+    </items>
+  </produce>
+  <produce type="electronic">
+    <items details="washing">
+      <product
+        type="washing"
+        name="washing machine"
+        quality="new"
+        delievery="yes"
+        price="100$"
+      >
+      </product>
+      <product
+        type="washing"
+        name="drying machine"
+        quality="new"
+        delievery="yes"
+        price="80$"
+      ></product>
+    </items>
+    <items details="spare_parts">
+      <product
+        type="spare_parts"
+        name="Iron"
+        price="30$"
+        delievery="yes"
+        quality="new"
+      ></product>
+      <product
+        type="car_parts"
+        name="baloon"
+        price="10$"
+        delievery="yes"
+        quality="new"
+      ></product>
+    </items>
+  </produce>
+</products>
