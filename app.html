@@ -14,48 +14,36 @@
         align-items: center;
       }
       .filter-container {
-        margin: 20px auto;
         display: flex;
-        -webkit-box-shadow: 0px 0px 100px 9px rgba(34, 60, 80, 0.2);
-        -moz-box-shadow: 0px 0px 100px 9px rgba(34, 60, 80, 0.2);
-        box-shadow: 0px 0px 100px 9px rgba(34, 60, 80, 0.2);
         font-size: 20px;
-        height: 9vh;
         align-items: center;
         justify-content: center;
         gap: 10px;
       }
       .container {
-        height: 78vh;
+        height: 80vh;
         overflow-y: auto;
       }
       .developed {
-        margin-top: 20px;
         display: flex;
         justify-content: center;
         align-items: center;
-        -webkit-box-shadow: 0px 0px 100px 9px rgba(34, 60, 80, 0.2);
-        -moz-box-shadow: 0px 0px 100px 9px rgba(34, 60, 80, 0.2);
-        box-shadow: 0px 0px 100px 9px rgba(34, 60, 80, 0.2);
         gap: 10px;
       }
       table {
-        height: auto;
+        -webkit-box-shadow: 0px 0px 100px 9px rgba(34, 60, 80, 0.2);
+        -moz-box-shadow: 0px 0px 100px 9px rgba(34, 60, 80, 0.2);
+        box-shadow: 0px 0px 100px 9px rgba(34, 60, 80, 0.2);
+        height: 90%;
         border-collapse: collapse;
         width: 100%;
       }
       th,
       td {
-          border: 1px solid black;
-          padding: 10px;
-          padding-left: 20px;
-          text-align: left;
-        }
-        th {
-          padding: 20px 30px;
-          font-size: 21px;
-          background-color: #f2f2f2;
-        }
+        border: 1px solid black;
+        padding: 10px 25px;
+        text-align: left;
+      }
       img {
         width: 100px;
         height: 100px;
@@ -97,8 +85,6 @@
               <th>Graphics Card</th>
               <th>RAM</th>
               <th>Storage</th>
-              <th>Price</th>
-              <th>Case</th>
             </tr>
           </thead>
           <tbody id="pc-table-body"></tbody>
@@ -128,8 +114,6 @@
           graphics: "GeForce RTX 5070 Ti - DLSS 4 - AI-Powered Performance",
           ram: "32GB DDR5 6400MHz",
           storage: "2TB M.2 NVMe SSD - AMA265KF5070TI3",
-          price: "10000000",
-          case: "Case: ABS Eurus 570 Snow White",
         },
         {
           name: "ABS Aeolian-M Aqua Gaming",
@@ -139,8 +123,6 @@
           graphics: "GeForce RTX 5070 Ti - DLSS 4 - AI-Powered Performance",
           ram: "32GB DDR5 6400MHz",
           storage: "2TB M.2 NVMe SSD - AMA265KF5070TI3",
-          price: "10000000",
-          case: "Case: ABS Eurus 570 Snow White",
         },
         {
           name: "ABS Aeolian-M Aqua Gaming",
@@ -150,8 +132,6 @@
           graphics: "GeForce RTX 5070 Ti - DLSS 4 - AI-Powered Performance",
           ram: "32GB DDR5 6400MHz",
           storage: "2TB M.2 NVMe SSD - AMA265KF5070TI3",
-          price: "10000000",
-          case: "Case: ABS Eurus 570 Snow White",
         },
         {
           name: "ABS Aeolian-M Aqua Gaming",
@@ -161,8 +141,6 @@
           graphics: "GeForce RTX 5070 Ti - DLSS 4 - AI-Powered Performance",
           ram: "32GB DDR5 6400MHz",
           storage: "2TB M.2 NVMe SSD - AMA265KF5070TI3",
-          price: "10000000",
-          case: "Case: ABS Eurus 570 Snow White",
         },
         {
           name: "ABS Aeolian-M Aqua Gaming",
@@ -172,8 +150,6 @@
           graphics: "GeForce RTX 5070 Ti - DLSS 4 - AI-Powered Performance",
           ram: "32GB DDR5 6400MHz",
           storage: "2TB M.2 NVMe SSD - AMA265KF5070TI3",
-          price: "10000000",
-          case: "Case: ABS Eurus 570 Snow White",
         },
       ];
       function renderTable(data) {
@@ -186,8 +162,6 @@
           const graphicsCell = row.insertCell();
           const ramCell = row.insertCell();
           const storageCell = row.insertCell();
-          const priceCell = row.insertCell();
-          const caseCell = row.insertCell();
 
           nameCell.textContent = pc.name;
           pictureCell.innerHTML = `<img src="${pc.picture}" alt="${pc.name}" width="100">`;
@@ -197,8 +171,6 @@
           graphicsCell.textContent = pc.graphics;
           ramCell.textContent = pc.ram;
           storageCell.textContent = pc.storage;
-          priceCell.textContent = pc.price;
-          caseCell.textContent = pc.case;
         });
       }
       processorFilter.addEventListener("change", function () {
@@ -209,7 +181,7 @@
           } else if (selectedProcessor === "Intel") {
             return pc.processor.startsWith("Intel");
           } else if (selectedProcessor === "AMD") {
-            return pc.processor.startsWith("AMD ");
+            return pc.processor.startsWith("AMD");
           }
           return false;
         });
