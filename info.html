@@ -34,7 +34,7 @@
 
 </we_re> -->
 
-<salon>
+<!-- <salon>
   <types>
     <car types="Cobalt">Cobalt</car>
     <car types="Maluba">Maluba</car>
@@ -67,11 +67,8 @@
       <type>Red, Blue</type>
     </car>
   </result>
-</salon>
-
-//Types of Food
-
-<products>
+</salon> -->
+<!-- <products>
   <produce type="melon_products">
     <items details="vegetable">
       <product
@@ -200,4 +197,118 @@
       ></product>
     </items>
   </produce>
-</products>
+</products> -->
+
+<style>
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  th,
+  td {
+    border: 1px solid black;
+    padding: 10px;
+    text-align: left;
+  }
+  th {
+    padding: 13px;
+    font-size: 21px;
+    background-color: #f2f2f2;
+  }
+</style>
+<div>
+  <label for="processor-filter">Protsessor bo'yicha filtrlash:</label>
+  <select id="processor-filter">
+    <option value="">Barcha protsessorlar</option>
+    <option value="Intel">Intel</option>
+    <option value="AMD">AMD</option>
+  </select>
+</div>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Picture</th>
+      <th>Processor</th>
+      <th>Graphics Card</th>
+      <th>RAM</th>
+      <th>Storage</th>
+    </tr>
+  </thead>
+  <tbody id="pc-table-body">
+  </tbody>
+</table>
+<script>
+  const processorFilter = document.getElementById("processor-filter");
+  const pcTableBody = document.getElementById("pc-table-body");
+  const pcData = [
+    {
+      name: "ABS Aeolian-M Aqua Gaming",
+      picture:
+        "https://c1.neweggimages.com/productimage/nb1280/83-360-767-08.jpg",
+      processor: "Intel Core Ultra 9 285K",
+      graphics: "GeForce RTX 5070 Ti - DLSS 4 - AI-Powered Performance",
+      ram: "32GB DDR5 6400MHz",
+      storage: "2TB M.2 NVMe SSD - AMA265KF5070TI3",
+    },
+    {
+      name: "ABS Eurus Ruby Gaming PC",
+      picture:
+        "https://c1.neweggimages.com/productimage/nb1280/83-360-780-08.jpg",
+      processor: "AMD Ryzen 7 9800X3D",
+      graphics: "GeForce RTX 5070 Ti - DLSS 4 - AI-Powered Performance",
+      ram: "32GB DDR5 6400MHz",
+      storage: "2TB M.2 NVMe SSD - ER9800X3D5070TI4",
+    },
+    {
+      name: "ABS Eurus Aqua Gaming PC",
+      picture:
+        "https://c1.neweggimages.com/productimage/nb1280/83-360-780-08.jpg",
+      processor: "Intel i9 14900KF - GeForce RTX 4080 Super",
+      graphics: "DLSS 3.5 - AI-Powered Performance",
+      ram: "32GB DDR5 5600MHz",
+      storage: "2TB M.2 NVMe SSD - ER9800X3D5070TI4",
+    },
+  ];
+
+  function renderTable(data) {
+    pcTableBody.innerHTML = ""; // Jadvalni tozalash
+    data.forEach((pc) => {
+      const row = pcTableBody.insertRow();
+      const nameCell = row.insertCell();
+      const pictureCell = row.insertCell();
+      const processorCell = row.insertCell();
+      const graphicsCell = row.insertCell();
+      const ramCell = row.insertCell();
+      const storageCell = row.insertCell();
+
+      nameCell.textContent = pc.name;
+      pictureCell.innerHTML = `<img src="${pc.picture}" alt="${pc.name}" width="100">`;
+      processorCell.textContent = pc.processor.startsWith("Intel")
+        ? "Intel"
+        : "AMD Ryzen"; // Faqat asosiy brendni ko'rsatish
+      graphicsCell.textContent = pc.graphics;
+      ramCell.textContent = pc.ram;
+      storageCell.textContent = pc.storage;
+    });
+  }
+
+  processorFilter.addEventListener("change", function () {
+    const selectedProcessor = this.value;
+    const filteredData = pcData.filter((pc) => {
+      if (selectedProcessor === "") {
+        return true; // Barcha elementlarni ko'rsatish
+      } else if (selectedProcessor === "Intel") {
+        return pc.processor.startsWith("Intel");
+      } else if (selectedProcessor === "AMD") {
+        return pc.processor.startsWith("AMD");
+      }
+      return false;
+    });
+    renderTable(filteredData);
+  });
+
+  // Sahifa yuklanganda jadvalni birinchi marta render qilish
+  renderTable(pcData);
+</script>

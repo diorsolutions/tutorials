@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pc Mini Market</title>
+    <style>
+      body {
+        display: flex;
+        height: 95vh;
+        gap: 20px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      .filter-container {
+        display: flex;
+        font-size: 20px;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+      }
+      .container {
+        height: 80vh;
+        overflow-y: auto;
+      }
+      .developed {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+      }
+      table {
+        -webkit-box-shadow: 0px 0px 100px 9px rgba(34, 60, 80, 0.2);
+        -moz-box-shadow: 0px 0px 100px 9px rgba(34, 60, 80, 0.2);
+        box-shadow: 0px 0px 100px 9px rgba(34, 60, 80, 0.2);
+        height: 90%;
+        border-collapse: collapse;
+        width: 100%;
+      }
+      th,
+      td {
+        border: 1px solid black;
+        padding: 10px 25px;
+        text-align: left;
+      }
+      img {
+        width: 100px;
+        height: 100px;
+      }
+      select {
+        outline: none;
+        padding: 10px;
+        border-radius: 5px;
+        border: 0.1px solid rgb(114, 112, 112);
+        font-size: 17px;
+      }
+      label {
+        font-size: 20px;
+      }
+      a {
+        text-decoration: none;
+        color: rgb(21, 106, 186);
+        font-size: 17px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="filter-container">
+        <label for="processor-filter">Filter by processor</label>
+        <select id="processor-filter">
+          <option value="">All processors</option>
+          <option value="Intel">Intel</option>
+          <option value="AMD">AMD</option>
+        </select>
+      </div>
+      <div class="container">
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Puctire</th>
+              <th>Processor</th>
+              <th>Graphics Card</th>
+              <th>RAM</th>
+              <th>Storage</th>
+            </tr>
+          </thead>
+          <tbody id="pc-table-body"></tbody>
+        </table>
+      </div>
+      <div class="developed">
+        <p>
+          © 2025 <a href="https://github.com/diorsolutions">Dior Olimov</a>.
+          Barcha huquqlar himoyalangan.
+        </p>
+        <p>
+          Developed by
+          <a href="https://github.com/diorsolutions">Dior Olimov</a>
+        </p>
+      </div>
+    </div>
+    <script>
+      const processorFilter = document.getElementById("processor-filter");
+      const pcTableBody = document.getElementById("pc-table-body");
+
+      const pcData = [
+        {
+          name: "ABS Aeolian-M Aqua Gaming",
+          picture:
+            "https://c1.neweggimages.com/productimage/nb1280/83-360-767-08.jpg",
+          processor: "AMD Ryzen 7 9800X3D",
+          graphics: "GeForce RTX 5070 Ti - DLSS 4 - AI-Powered Performance",
+          ram: "32GB DDR5 6400MHz",
+          storage: "2TB M.2 NVMe SSD - AMA265KF5070TI3",
+        },
+        {
+          name: "ABS Aeolian-M Aqua Gaming",
+          picture:
+            "https://c1.neweggimages.com/productimage/nb1280/83-360-767-08.jpg",
+          processor: "Intel Core Ultra 9 285K",
+          graphics: "GeForce RTX 5070 Ti - DLSS 4 - AI-Powered Performance",
+          ram: "32GB DDR5 6400MHz",
+          storage: "2TB M.2 NVMe SSD - AMA265KF5070TI3",
+        },
+        {
+          name: "ABS Aeolian-M Aqua Gaming",
+          picture:
+            "https://c1.neweggimages.com/productimage/nb1280/83-360-767-08.jpg",
+          processor: "AMD Ryzen 7 9800X3D",
+          graphics: "GeForce RTX 5070 Ti - DLSS 4 - AI-Powered Performance",
+          ram: "32GB DDR5 6400MHz",
+          storage: "2TB M.2 NVMe SSD - AMA265KF5070TI3",
+        },
+        {
+          name: "ABS Aeolian-M Aqua Gaming",
+          picture:
+            "https://c1.neweggimages.com/productimage/nb1280/83-360-767-08.jpg",
+          processor: "Intel Core Ultra 9 285K",
+          graphics: "GeForce RTX 5070 Ti - DLSS 4 - AI-Powered Performance",
+          ram: "32GB DDR5 6400MHz",
+          storage: "2TB M.2 NVMe SSD - AMA265KF5070TI3",
+        },
+        {
+          name: "ABS Aeolian-M Aqua Gaming",
+          picture:
+            "https://c1.neweggimages.com/productimage/nb1280/83-360-767-08.jpg",
+          processor: "AMD Ryzen 7 9800X3D",
+          graphics: "GeForce RTX 5070 Ti - DLSS 4 - AI-Powered Performance",
+          ram: "32GB DDR5 6400MHz",
+          storage: "2TB M.2 NVMe SSD - AMA265KF5070TI3",
+        },
+      ];
+      function renderTable(data) {
+        pcTableBody.innerHTML = "";
+        data.forEach((pc) => {
+          const row = pcTableBody.insertRow();
+          const nameCell = row.insertCell();
+          const pictureCell = row.insertCell();
+          const processorCell = row.insertCell();
+          const graphicsCell = row.insertCell();
+          const ramCell = row.insertCell();
+          const storageCell = row.insertCell();
+
+          nameCell.textContent = pc.name;
+          pictureCell.innerHTML = `<img src="${pc.picture}" alt="${pc.name}" width="100">`;
+          processorCell.textContent = pc.processor.startsWith("Intel")
+            ? "Intel"
+            : "AMD";
+          graphicsCell.textContent = pc.graphics;
+          ramCell.textContent = pc.ram;
+          storageCell.textContent = pc.storage;
+        });
+      }
+      processorFilter.addEventListener("change", function () {
+        const selectedProcessor = this.value;
+        const filteredData = pcData.filter((pc) => {
+          if (selectedProcessor === "") {
+            return true;
+          } else if (selectedProcessor === "Intel") {
+            return pc.processor.startsWith("Intel");
+          } else if (selectedProcessor === "AMD") {
+            return pc.processor.startsWith("AMD");
+          }
+          return false;
+        });
+        renderTable(filteredData);
+      });
+
+      renderTable(pcData);
+    </script>
+  </body>
+</html>
